@@ -34,11 +34,13 @@ android {
 
 dependencies {
 
-    implementation(fileTree(mapOf(
-        "dir" to "libs",
-        "include" to listOf("*.aar", "*.jar"),
-        "exclude" to emptyList<String>()
-    )))
+//    implementation(fileTree(mapOf(
+//        "dir" to "libs",
+//        "include" to listOf("*.aar", "*.jar"),
+//        "exclude" to emptyList<String>()
+//    )))
+
+    compileOnly(files("libs/sherpa-onnx-1.11.3.aar"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
